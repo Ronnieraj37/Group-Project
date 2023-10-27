@@ -118,7 +118,7 @@
             font-size: 1.6rem;
             text-align: center;
             & li{
-                background: $color-button-dark;
+                // background: $color-button-dark;
                 border-radius: 30px;
                 margin: 5px  5px;
                 width: 45%;
@@ -163,10 +163,10 @@
             &#revoke{
                 &:hover{
                     // transform: rotate(360deg);
-                    background-color: $color-button-dark;
+                    // background-color: $color-button-dark;
                     border-radius: 30px;
                     font-weight: 300;
-                    color: $color-button-primary;
+                    // color: $color-button-primary;
                 }
             }
         }
@@ -177,6 +177,7 @@
         // background-image: radial-gradient(ellipse at center top, #075014, #346f3f, #b3b5b3);
         color: black
     }
+    bottom: 0px;
 }
 .qr{
     position: fixed;

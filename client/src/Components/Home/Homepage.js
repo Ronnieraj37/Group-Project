@@ -61,7 +61,7 @@ const Homepage = ({ setconnected }) => {
         symbol: "ETH",
         decimals: 18,
         },
-        rpcUrls: ["https://rpc.ankr.com/eth_goerli"],
+        rpcUrls: ["wss://ethereum-goerli.publicnode.com	"],
         blockExplorerUrls: ["https://goerli.etherscan.io"],
         },
         ],
@@ -100,11 +100,12 @@ const Homepage = ({ setconnected }) => {
     }
   };
   const registerPush=async()=>{
+    console.log("RegisterPush",signers);
     try {
       const _userAlice = await PushAPI.initialize(signers, { env: 'staging' });
       setuserAlice(_userAlice);
-    } catch (error) {
-      
+    } catch (error){
+      console.log("Error",error);
     }
   }
   const checkRegistered = async () => {
@@ -115,9 +116,10 @@ const Homepage = ({ setconnected }) => {
       var val = parseInt(mssg.hex, 16);
       console.log("time", val);
       setLoader(false);
+      console.log("hereat val-0")
       if (val === 0) {
         const userData = await contract.userDetails();
-        console.log(userData);
+        console.log("Userdata",userData);
         setuserDetails(userData);
         setfolders(userData.Folders);
         setfetched(true);

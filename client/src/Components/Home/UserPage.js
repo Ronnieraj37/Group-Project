@@ -332,21 +332,21 @@ const UserPage = ({ contract, fetched, folders,account,userAlice }) => {
                   </div>
                   <div className="row__sections">
                       {activeCompData.map((active,key)=>{ return(
-                        <div key = {key} className="column" style={{color: 'black', backgroundImage: `${setBgColor(key)}`, cursor: 'pointer'}}>
+                        <div key = {key} className="column" style={{color: 'black', backgroundImage: `${setBgColor(key)}`}}>
                           <div className="column__header">
                             <div className="column__title">{activecompanyDetails.length === 0 ? <p>Company</p> : <p>{activecompanyDetails[key].Name}</p>} </div>
                           </div>
                           <div className="column__fields">
                           <ul>
-                                  {active.Name && <li>Name</li>}
-                                  {active.Image&& <li>Image</li>}
-                                  {active.DOB && <li>DOB</li>}
-                                  {active.Phone && <li>Phone</li>}
+                                  {active.Name && <li style={{backgroundColor: 'rgba(white, .3)'}}>Name</li>}
+                                  {active.Image&& <li style={{backgroundColor: 'rgba(white, .3)'}}>Image</li>}
+                                  {active.DOB && <li style={{backgroundColor: 'rgba(white, .3)'}}>DOB</li>}
+                                  {active.Phone && <li style={{backgroundColor: 'rgba(white, .3)'}}>Phone</li>}
                                   <span>Folders:</span>
                                     <ul>
-                                      {active.Folders[0] && <li>Medical</li>}
-                                      {active.Folders[1] && <li>Bank</li>}
-                                      {active.Folders[2] && <li>Academics</li>}
+                                      {active.Folders[0] && <li style={{backgroundColor: 'rgba(white, .3)'}}>Medical</li>}
+                                      {active.Folders[1] && <li style={{backgroundColor: 'rgba(white, .3)'}}>Bank</li>}
+                                      {active.Folders[2] && <li style={{backgroundColor: 'rgba(white, .3)'}}>Academics</li>}
                                     </ul>
                                 </ul>
                           </div>
